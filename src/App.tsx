@@ -1,5 +1,6 @@
 import './App.css';
 import Clock from './Clock';
+import Person from './Person';
 
 
 // isto é um componente : uma função que retorna html
@@ -8,7 +9,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Clock />
-        </header>
+        <Person />
+      </header>
     </div>
   );
 }
