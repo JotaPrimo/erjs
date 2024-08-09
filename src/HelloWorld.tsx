@@ -1,14 +1,24 @@
 export default function HelloWorld () {
 
-    const name = 'Jota Santos'
+    const name = 'Jota'
+    const title = <h1>Hello, {name}</h1>
+
+    // atributos com jsx
+
+
+    if (name === 'Jota') {
+        return (
+            <>
+               <h1 tabIndex={0} style={ {background: 'blue'} }>{name}</h1>
+            </>
+        )
+    }
+    
+    
 
     return (
         <>
-            <h2>
-                Hello World React.js, { name === 'Jota Santos' 
-                    ? name : 
-                    'Jessica' } !!!
-            </h2>
+            { title }
         </>
     )
 }
