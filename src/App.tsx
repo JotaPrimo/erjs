@@ -1,14 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import HelloWorld from './HelloWorld';
 
+
+// isto é um componente : uma função que retorna html
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        
+        <HelloWorld />
+        
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Olá mundo
         </p>
         <a
           className="App-link"
