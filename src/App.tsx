@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Card title='Card do texto'>
+        <Card align='left' title='Card do texto'>
           <Post post={post} totalComments={12} />
         </Card>
       </header>

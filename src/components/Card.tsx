@@ -1,19 +1,22 @@
 import { PropsWithChildren } from "react";
 
+import './Card.css'
+
 type CardProps = PropsWithChildren<{
-    title: string
+    title: string,
+    align?: 'left' | 'center' | 'right'
 }>
 
 export default function Card(props: CardProps) {
     console.log(props.children);
-    
-    return <div
-        style={{
-            background: 'rgba(0,0,0,.25)',
-            borderRadius: 8,
-            padding: 16
-        }}>
-            <div>{props.title}</div>
-        { props.children }
-    </div>
+
+    return (
+        <div
+            className={`Card ${props.align} || center`}>
+            <div>
+                {props.title}
+            </div>
+            {props.children}
+        </div>
+    )
 }
