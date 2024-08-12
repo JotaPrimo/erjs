@@ -1,6 +1,5 @@
 import { PropsWithChildren } from "react";
-
-import './Card.css'
+import * as C from './Cars.styles';
 
 type CardProps = PropsWithChildren<{
     title: string,
@@ -11,12 +10,11 @@ export default function Card(props: CardProps) {
     console.log(props.children);
 
     return (
-        <div
-            className={`Card ${props.align} || center`}>
-            <div>
+        <C.Wrapper align={props.align || "center"}>
+            <C.Title>
                 {props.title}
-            </div>
+            </C.Title>
             {props.children}
-        </div>
+        </C.Wrapper>
     )
 }
