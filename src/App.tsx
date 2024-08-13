@@ -13,14 +13,15 @@ function App() {
   // por isso que quando se usar o set parta alterar o state post,  que é uma prop de post
   // ele re-renderiza
   const [post] = useState({
-    title: 'Título muito maneiro',
-    content: 'Lorem ipsum dolor sit amet'
+    title: 'Título maneiro',
+    content: 'Lorem Ipsum dolor sit amet'
   })
+
 
   return (
     <div className="App">
       <header className="App-header">
-        <Card align='left' title='Card do texto'>
+        <Card align="left" title={"Card"}>
           <Post post={post} totalComments={12} />
         </Card>
       </header>
