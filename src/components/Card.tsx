@@ -1,26 +1,19 @@
 import { PropsWithChildren } from "react";
-import * as C from './Cars.styles';
 import Button from "./Button";
-
+import * as C from './Cards.styles';
 type CardProps = PropsWithChildren<{
-    title: string,
-    align?: 'left' | 'center' | 'right'
+  title: string
+  align?: 'center' | 'left' | 'right'
 }>
 
-export default function Card(props: CardProps) {
-    console.log(props.children);
-
-    return (
-        <C.Wrapper align={props.align || "center"}>
-            <C.Title>
-                {props.title}
-            </C.Title>
-            {props.children}
-            <div>
-                <Button>
-                    Ver mais
-                </Button>
-            </div>
-        </C.Wrapper>
-    )
+export default function Card (props: CardProps) {
+  return <C.Wrapper align={props.align || 'left'}>
+    <C.Title>{props.title}</C.Title>
+    { props.children }
+    <div>
+      <Button onClick={() => console.log('batata')}>
+        Ver mais
+      </Button>
+    </div>
+  </C.Wrapper>
 }

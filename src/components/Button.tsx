@@ -1,14 +1,15 @@
-import { Component, ReactNode } from "react";
+import { Component } from "react";
 
-// criando class components, forma antiga de estilizar
-// componente baseado em classe
-class Button  extends Component {
-    render(): ReactNode {
-        return <div>
-            todo: button
-        </div>
-    }
+interface ButtonProps {
+  onClick?: () => any
 }
 
+class Button extends Component<ButtonProps> {
+  render () {
+    return <button onClick={this.props.onClick}>
+      { this.props.children }
+    </button>
+  }
+}
 
 export default Button
