@@ -4,7 +4,7 @@ import useCounter from './hooks/useCounter';
 
 function App() {
 
-  const number = useCounter()
+  const number = useCounter(0)
 
   return (
     <div className="App">
