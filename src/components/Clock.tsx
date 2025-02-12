@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
  */
 export default function Clock() {
     
+    // aqui é um estado
     const [time, setTime] =useState<Date>()
 
     useEffect(() => {
@@ -16,7 +17,7 @@ export default function Clock() {
     
     return (
         <div>
-            agora: { time?.toTimeString() }
+            agora: { time?.toLocaleTimeString() }
         </div>
     )
 }
