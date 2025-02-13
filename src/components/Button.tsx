@@ -1,20 +1,15 @@
-import { Component, ReactNode } from "react";
+import { Component } from "react";
 
-/**
- * Estamos estudando componentes baseados em classes e sua importância,
- * Esses componentes são muito usados ainda, embora sua api seja verbosa
- * vamos usar hooks, eles aprimoram o classes componentes 
- */
-class Button extends Component {
+interface ButtonProps {
+  onClick?: () => any
+}
 
-    // qual o jsx de retorno dessa class
-    render(): ReactNode {
-        return (
-            <div>
-                todo: button
-            </div>
-        )
-    }
+class Button extends Component<ButtonProps> {
+  render () {
+    return <button onClick={this.props.onClick}>
+      { this.props.children }
+    </button>
+  }
 }
 
 export default Button
