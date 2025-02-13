@@ -1,0 +1,17 @@
+/**
+* Nomes de classes começam com letras maiúsculas
+*/
+
+.Card {
+    background: rgba(0,0,0,.25);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.Card.left {
+    text-align: left;
+}
+
+.Card.center {
+    text-align: center;
+}
