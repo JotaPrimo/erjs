@@ -1,29 +1,24 @@
-import { useState } from 'react';
 import './App.css';
-import Card from './components/Card';
-import Post, { PostObject } from './components/Post';
 
 function App() {
-  const [post, setPost] = useState<PostObject | undefined>({
-    title: 'Título maneiro',
-    content: 'Lorem Ipsum dolor sit amet'
-  })
-  
 
+  function handleClick(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    e.preventDefault();
+    console.log(e);    
+  }
+
+  /**
+   * Devo usar arrow function ou passar a refencia da função
+   */
   return (
     <div className="App">
-      <header className="App-header">
-        {
-          !!post && 
-          <Card align="left" title={"Card"}>
-            <Post post={post} totalComments={12} />
-          </Card>              
-        }
-       <button onClick={() => setPost(undefined)}>
-        Remover post
-      </button>
-      </header>
-      
+      <header className="App-header">       
+       <form action="/test">
+        <button onClick={ handleClick }>
+            Clique em mim
+          </button>
+       </form>
+      </header>      
     </div>
   );
 }
