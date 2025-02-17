@@ -10,8 +10,7 @@ export default function Person() {
 
     // ainda tem o useEffect para gerenciar efeitos colaterais
     setTimeout(() => {
-        setPerson((state) => {
-            console.log('state antes do set ', state)
+        setPerson((state) => {           
             return 'Jessica Helena'
         })
     }, 3000)

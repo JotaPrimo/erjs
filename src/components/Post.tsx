@@ -14,7 +14,7 @@ interface PostProps {
  */
 function Post(props: PostProps) {   
 
-    console.log("post renderizado")
+  
     return ( 
         <div>
             <h3>{props.post.title}</h3>
