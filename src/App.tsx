@@ -1,11 +1,7 @@
 import './App.css';
+import Form from './components/Form';
 
 function App() {
-
-  function handleClick(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-    e.preventDefault();
-    console.log(e);    
-  }
 
   /**
    * Devo usar arrow function ou passar a refencia da função
@@ -13,11 +9,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">       
-       <form action="/test">
-        <button onClick={ handleClick }>
-            Clique em mim
-          </button>
-       </form>
+        <Form />
       </header>      
     </div>
   );
