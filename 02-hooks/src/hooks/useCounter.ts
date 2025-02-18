@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-function useCounter() {
-    const [number, setNumber] = useState(0);
+function useCounter(initialNumber: number = 1) {
+    const [number, setNumber] = useState(initialNumber);
 
     /**
      * nenhum efeito colateral pode ser executado direto na raiz do compoente
@@ -10,9 +10,9 @@ function useCounter() {
      * */ 
     useEffect(() => {
         setTimeout(() => {
-            setNumber(2)
+            setNumber(number + 1)
          }, 4000)
-    }, [])
+    }, [number])
 
     return number;
 }
